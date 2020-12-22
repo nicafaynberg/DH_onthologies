@@ -1,0 +1,11 @@
+from bs4 import BeautifulSoup
+import lxml
+
+with open("kheyfets.html", "r") as kheyfets:
+    contents = kheyfets.read()
+
+soup = BeautifulSoup(contents, 'lxml')
+for tag in soup.find_all("span"):
+        print(tag.text)
+        
+       
